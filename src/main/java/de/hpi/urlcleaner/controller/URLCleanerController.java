@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.UnsupportedEncodingException;
+
 @RestController
 public class URLCleanerController {
 
@@ -25,10 +27,10 @@ public class URLCleanerController {
     }
 
     @RequestMapping(value = "/clean", method = RequestMethod.POST, produces = "application/json")
-    public CleanURLResponse parse(@RequestBody CleanURLParameter parameter) {
+    public CleanURLResponse parse(@RequestBody CleanURLParameter parameter) throws UnsupportedEncodingException {
         CleanURLResponse response = new CleanURLResponse();
         response.setBlacklisted(false);
-        response.setCleanURL("test" + getService().cleanUrl(parameter.getUrl()));
+        response.setCleanURL(getService().cleanUrl(parameter.getUrl()));
         return response;
     }
 
