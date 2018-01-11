@@ -11,6 +11,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class URLCleaner {
+    // TODO - need to be unit-tested
+    // TODO - use strategy pattern to implement different cleaner strategies, f.e. affiliateCleaner, ClicktrackerCleander, XYZCleander ...
 
     public static String cleanURL(String url) throws UnsupportedEncodingException {
         List<String> affiliateSeparator1 = Stream.of("/", "?", "&").collect(Collectors.toList());
