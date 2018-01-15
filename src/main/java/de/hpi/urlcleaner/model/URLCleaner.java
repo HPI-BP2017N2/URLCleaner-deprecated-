@@ -3,16 +3,21 @@ package de.hpi.urlcleaner.model;
 import org.apache.tomcat.util.buf.StringUtils;
 
 import java.io.UnsupportedEncodingException;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class URLCleaner {
 
-    public static String cleanURL(String url) throws UnsupportedEncodingException {
+    public static List<String> cleanURL(List<String> dirtyUrls) throws UnsupportedEncodingException {
+        List<String> cleanedUrls = new LinkedList<>();
+        for (String url : dirtyUrls) {
+            cleanedUrls.add(cleanURL(url));
+        }
+        return cleanedUrls;
+    }
+
+    private static String cleanURL(String url) throws UnsupportedEncodingException {
         List<String> affiliateSeparator1 = Stream.of("/", "?", "&").collect(Collectors.toList());
         List<String> affiliateSeparator2 = Stream.of("partner=", "utm", "ref=", "clk_rvr_id", "aid=", "apid=", "from=", "spartner=", "rbtc=", "afid=", "affiliateid=", "channable=", "p=psmido", "sid=", "io=", "modsid=", "traffic_source", "smid=", "sclid=", "clk_rvr_id=", "wt_mc=", "tag=", "campaign=", "wmn=", "saleschannelid=", "uympq=", "refid", "cid=", "awc=", "wt.mc_id=", "from=", "partnerid=", "referrerid=", "campaign=", "a_id=", "emsrc=", "pv=").collect(Collectors.toList());
 

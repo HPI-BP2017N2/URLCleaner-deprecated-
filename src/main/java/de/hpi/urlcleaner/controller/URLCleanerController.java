@@ -30,7 +30,7 @@ public class URLCleanerController {
     public CleanURLResponse parse(@RequestBody CleanURLParameter parameter) throws UnsupportedEncodingException {
         CleanURLResponse response = new CleanURLResponse();
         response.setBlacklisted(false);
-        response.setCleanURL(getService().cleanUrl(parameter.getUrl()));
+        response.setCleanUrls(getService().cleanUrl(parameter.getUrls()));
         return response;
     }
 
