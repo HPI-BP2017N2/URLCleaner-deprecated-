@@ -8,6 +8,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class URLCleaner {
+    // TODO - need to be unit-tested
+    // TODO - use strategy pattern to implement different cleaner strategies, f.e. affiliateCleaner, ClicktrackerCleander, XYZCleander ...
 
     public static List<String> cleanURL(List<String> dirtyUrls) throws UnsupportedEncodingException {
         List<String> cleanedUrls = new LinkedList<>();
