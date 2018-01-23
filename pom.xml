@@ -43,7 +43,6 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <start-class>de.hpi.</start-class>
     </properties>
 
     <build>

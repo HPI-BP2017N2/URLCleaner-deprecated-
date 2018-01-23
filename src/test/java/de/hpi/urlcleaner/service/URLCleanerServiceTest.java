@@ -29,7 +29,13 @@ class URLCleanerServiceTest {
             "https://www.tiierisch.de/produkt/bosch-sanabelle-adult-katzenfutter",
             "https://www.hornbach.de/shop/Katzenfutter-trocken-Sanabelle-Adult-Gefluegel-10-kg/8217055/artikel.html",
             "http://www.zooplus.de/shop/katzen/katzenfutter_trockenfutter/sanabelle/sanabelle_adult/429651",
-            "https://www.rinderohr.de/sanabelle-adult-gefluegel-5846"
+            "https://www.rinderohr.de/sanabelle-adult-gefluegel-5846",
+            "https://www.megabuecher.de/horror/5110993-tokyo-summer-of-the-dead-bd-4.html",
+            "https://www.sport-kanze.de/Erima-Porto-Trikot-313539-green-schwarz-Gr-L",
+            "https://tecfox.de/makita-delta-schleifpap-farbe-k60-b-21680",
+            "https://www.crowdfox.com/gemshine---damen---ring---spannring---vergoldet---rauchquarz---braun-PNGU3MjMwY2Y1Ng==.html",
+            "http://www.schutzfolien24.de/artikel/brotect-airglass-premium-glasfolie-klar-fuer-fujifilm-x20-2707982.html",
+            "https://www.alza.at/plus-plus-midi-basic-150-hubschrauber-d5099564.htm"
             ));
 
 
@@ -48,7 +54,13 @@ class URLCleanerServiceTest {
             "https://www.tiierisch.de/produkt/bosch-sanabelle-adult-katzenfutter?ref=idealo&utm_source=idealo&utm_campaign=idealo%7Ccpc&utm_medium=cpc&utm_term=Katzenfutter&utm_content=HG6688118",
             "https://www.hornbach.de/shop/Katzenfutter-trocken-Sanabelle-Adult-Gefluegel-10-kg/8217055/artikel.html?WT.mc_id=de11p005&WT.tsrc=Preissuchmaschinen",
             "http://www.zooplus.de/shop/katzen/katzenfutter_trockenfutter/sanabelle/sanabelle_adult/429651?awc=11330_1516099566_1d425741846259d206bae926cbc87ead",
-            "https://www.rinderohr.de/sanabelle-adult-gefluegel-5846?sPartner=idealo&number=01043771&utm_source=idealo&utm_medium=refferal&utm_campaign=idealo"
+            "https://www.rinderohr.de/sanabelle-adult-gefluegel-5846?sPartner=idealo&number=01043771&utm_source=idealo&utm_medium=refferal&utm_campaign=idealo",
+            "https://www.megabuecher.de/horror/5110993-tokyo-summer-of-the-dead-bd-4.html?utm_si=RFlidjRTZUc2TlRFeE1EazVNell1TlRReU1EVTI=",
+            "https://www.sport-kanze.de/Erima-Porto-Trikot-313539-green-schwarz-Gr-L?idealo=01",
+            "https://tecfox.de/makita-delta-schleifpap-farbe-k60-b-21680?fee=31&fep=104349&utm_source=preisvergleich&utm_medium=cpc&utm_campaign=idealo",
+            "https://www.crowdfox.com/gemshine---damen---ring---spannring---vergoldet---rauchquarz---braun-PNGU3MjMwY2Y1Ng==.html?pt=45bcd9ef&utm_source=idealo_network&utm_medium=pce&utm_campaign=idealo_network&directCheckoutButton=true&petype=1&mtype=0&pId=1_4_2506105281",
+            "http://www.schutzfolien24.de/artikel/brotect-airglass-premium-glasfolie-klar-fuer-fujifilm-x20-2707982.html?idealo=1",
+            "https://www.alza.at/plus-plus-midi-basic-150-hubschrauber-d5099564.htm?kampan=idealo_AT_prodej_plastik-kits-hrajd0032&utm_source=idealo_AT&utm_medium=product&utm_campaign=idealo_AT_prodej_plastik-kits-hrajd0032"
             ));
 
 

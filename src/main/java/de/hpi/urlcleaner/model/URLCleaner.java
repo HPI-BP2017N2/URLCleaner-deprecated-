@@ -14,10 +14,12 @@ public class URLCleaner {
 
     public static String cleanURL(String url) throws UnsupportedEncodingException {
         List<String> affiliateSeparator1 = Stream.of("/", "?", "&").collect(Collectors.toList());
-        List<String> affiliateSeparator2 = Stream.of("partner=", "utm", "ref=", "clk_rvr_id", "aid=", "apid=", "from=", "spartner=", "rbtc=", "afid=", "affiliateid=", "channable=", "p=psmido", "sid=", "io=", "modsid=", "traffic_source", "smid=", "sclid=", "clk_rvr_id=", "wt_mc=", "tag=", "campaign=", "wmn=", "saleschannelid=", "uympq=", "refid", "cid=", "awc=", "wt.mc_id=", "from=", "partnerid=", "referrerid=", "campaign=", "a_id=", "emsrc=", "pv=", "fee=", "fep=", "store=", "pidOnPds=", "number=").collect(Collectors.toList());
+        List<String> affiliateSeparator2 = Stream.of("partner=", "utm", "ref=", "clk_rvr_id", "aid=", "apid=", "from=", "spartner=", "rbtc=", "afid=", "affiliateid=", "channable=", "p=psmido", "sid=", "io=", "modsid=", "traffic_source", "smid=", "sclid=", "clk_rvr_id=", "wt_mc=", "tag=", "campaign=", "wmn=", "saleschannelid=", "uympq=", "refid", "cid=", "awc=", "wt.mc_id=", "from=", "partnerid=", "referrerid=", "campaign=", "a_id=", "emsrc=", "pv=", "fee=", "fep=", "store=", "pidOnPds=", "number=", "actionid", "idealo=", "pt=", "kampan=").collect(Collectors.toList());
 
-        // java.net.URLDecoder.decode(url, "UTF-8");
+        url = java.net.URLDecoder.decode(url, "UTF-8");
         String urlLowerCase = url.toLowerCase();
+
+        //TODO cut only till next "/", "?" OR "&"
 
         for (String separator1 : affiliateSeparator1) {
             for (String separator2 : affiliateSeparator2) {
