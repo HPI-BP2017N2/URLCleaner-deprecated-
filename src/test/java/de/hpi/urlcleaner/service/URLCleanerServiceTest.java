@@ -11,6 +11,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+
 class URLCleanerServiceTest {
 
     List<String> cleanLinks = new ArrayList<>(Arrays.asList(
@@ -53,6 +54,9 @@ class URLCleanerServiceTest {
 
     @Test
     void cleanUrl() throws UnsupportedEncodingException {
-        assertEquals(cleanLinks, URLCleaner.cleanURL(dirlyLinks));
+        for (int i = 0; i < dirlyLinks.size(); i++) {
+            assertEquals(cleanLinks.get(i), URLCleaner.cleanURL(dirlyLinks.get(i)));
+        }
     }
 }
+

@@ -8,5 +8,5 @@ import java.util.List;
 @Getter @Setter
 public class CleanURLParameter {
 
-    private List<String> urls;
+    private String url;
 }

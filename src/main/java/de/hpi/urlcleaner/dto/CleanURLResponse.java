@@ -9,5 +9,5 @@ import java.util.List;
 public class CleanURLResponse {
 
     private boolean blacklisted;
-    private List<String> cleanUrls;
+    private String cleanUrl;
 }

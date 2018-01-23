@@ -9,8 +9,8 @@ import java.util.List;
 @Service
 public class URLCleanerService {
 
-    public List<String> cleanUrl(List<String> urls) throws UnsupportedEncodingException {
-        return URLCleaner.cleanURL(urls);
+    public String cleanUrl(String url) throws UnsupportedEncodingException {
+        return URLCleaner.cleanURL(url);
     }
 
 }
