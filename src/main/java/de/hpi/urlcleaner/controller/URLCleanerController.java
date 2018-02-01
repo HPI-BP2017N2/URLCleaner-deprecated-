@@ -21,10 +21,10 @@ public class URLCleanerController {
     }
 
     @RequestMapping(value = "/cleanURL", method = RequestMethod.GET, produces = "application/json")
-    public CleanURLResponse cleanURL(@RequestParam(value="url") String url) {
+    public CleanURLResponse cleanURL(@RequestParam(value="shopID") long shopID, @RequestParam(value="url") String url) {
         CleanURLResponse response = new CleanURLResponse();
         response.setBlacklisted(false);
-        response.setCleanUrl(getService().cleanUrl(url));
+        response.setCleanUrl(getService().cleanUrl(shopID, url));
         return response;
     }
 

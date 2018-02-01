@@ -21,9 +21,9 @@ public class URLCleaner {
         getCleanStrategies().add(new CleanRedirect());
     }
 
-    public String clean(String url) {
+    public String clean(String rootUrl, String url) {
         for (CleanStrategy strategy : getCleanStrategies()) {
-            url = strategy.clean(url);
+            url = strategy.clean(rootUrl, url);
         }
         return url;
     }
