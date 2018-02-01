@@ -1,6 +1,6 @@
 package de.hpi.urlcleaner.controller;
 
-import de.hpi.urlcleaner.dto.CleanURLResponse;
+import de.hpi.restclient.dto.CleanURLResponse;
 import de.hpi.urlcleaner.service.URLCleanerService;
 import lombok.AccessLevel;
 import lombok.Getter;
