@@ -20,7 +20,7 @@ public class URLCleanerController {
         setService(service);
     }
 
-    @RequestMapping(value = "/clean", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value = "/cleanURL", method = RequestMethod.GET, produces = "application/json")
     public CleanURLResponse clean(@RequestParam(value="url") String url)  throws UnsupportedEncodingException {
         CleanURLResponse response = new CleanURLResponse();
         response.setBlacklisted(false);
