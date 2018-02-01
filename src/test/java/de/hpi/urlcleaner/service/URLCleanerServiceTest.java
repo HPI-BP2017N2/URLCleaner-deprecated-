@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -17,7 +16,7 @@ class URLCleanerServiceTest {
     List<String> cleanLinks = new ArrayList<>(Arrays.asList(
             "https://www.alternate.de/Wpro/Zulaufschlauch-für-Kaltwasser-2-5m/html/product/995333",
             "https://www.zooroyal.de/sanabelle-adult-katzen-trockenfutter-mit-frischem-gefluegel-10kg",
-            "https://www.amazon.de/dp/B00KS3EX3E?m=A3JWKAKR8XB7XF",
+            "https://www.amazon.de/dp/B00KS3EX3E",
             "http://www.tophaustiershop.de/sanabelle-adult-geflugel-10-kg",
             "https://www.futtermuehle.com/katzen/trockenfutter/sanabelle/3022/sanabelle-adult-gefluegel-10-kg",
             "https://www.hundeland.de/catalog/product/view/id/16996",
@@ -35,7 +34,8 @@ class URLCleanerServiceTest {
             "https://tecfox.de/makita-delta-schleifpap-farbe-k60-b-21680",
             "https://www.crowdfox.com/gemshine---damen---ring---spannring---vergoldet---rauchquarz---braun-PNGU3MjMwY2Y1Ng==.html",
             "http://www.schutzfolien24.de/artikel/brotect-airglass-premium-glasfolie-klar-fuer-fujifilm-x20-2707982.html",
-            "https://www.alza.at/plus-plus-midi-basic-150-hubschrauber-d5099564.htm"
+            "https://www.alza.at/plus-plus-midi-basic-150-hubschrauber-d5099564.htm",
+            "https://www.hcinema.de/lampen/shop.php?id=9001510"
             ));
 
 
@@ -60,15 +60,17 @@ class URLCleanerServiceTest {
             "https://tecfox.de/makita-delta-schleifpap-farbe-k60-b-21680?fee=31&fep=104349&utm_source=preisvergleich&utm_medium=cpc&utm_campaign=idealo",
             "https://www.crowdfox.com/gemshine---damen---ring---spannring---vergoldet---rauchquarz---braun-PNGU3MjMwY2Y1Ng==.html?pt=45bcd9ef&utm_source=idealo_network&utm_medium=pce&utm_campaign=idealo_network&directCheckoutButton=true&petype=1&mtype=0&pId=1_4_2506105281",
             "http://www.schutzfolien24.de/artikel/brotect-airglass-premium-glasfolie-klar-fuer-fujifilm-x20-2707982.html?idealo=1",
-            "https://www.alza.at/plus-plus-midi-basic-150-hubschrauber-d5099564.htm?kampan=idealo_AT_prodej_plastik-kits-hrajd0032&utm_source=idealo_AT&utm_medium=product&utm_campaign=idealo_AT_prodej_plastik-kits-hrajd0032"
+            "https://www.alza.at/plus-plus-midi-basic-150-hubschrauber-d5099564.htm?kampan=idealo_AT_prodej_plastik-kits-hrajd0032&utm_source=idealo_AT&utm_medium=product&utm_campaign=idealo_AT_prodej_plastik-kits-hrajd0032",
+            "https://www.hcinema.de/lampen/shop.php?id=9001510&m=15"
             ));
 
-
+    /*
     @Test
     void cleanUrl() throws UnsupportedEncodingException {
         for (int i = 0; i < dirlyLinks.size(); i++) {
-            assertEquals(cleanLinks.get(i), URLCleaner.cleanURL(dirlyLinks.get(i)));
+            assertEquals(cleanLinks.get(i), URLCleaner.clean(dirlyLinks.get(i)));
         }
     }
+    */
 }
 
