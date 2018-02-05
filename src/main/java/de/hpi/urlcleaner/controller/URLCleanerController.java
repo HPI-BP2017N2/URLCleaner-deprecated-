@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.io.UnsupportedEncodingException;
 
 @RestController
-public class URLCleanerController {
+public class  URLCleanerController {
 
     @Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private URLCleanerService service;
 
