@@ -1,9 +1,12 @@
 server:
- port: ${URLCLEANER_PORT}
+  port: ${URLCLEANER_PORT}
 
 bpbridge:
- root: ${BPBRIDGE_IP}
- getRandomOfferRoute: ‘/getRandomOffers’
- shopIDToURLRoute: ‘/shopIDToUrl’
- matchAttributeRoute: ‘/matchAttribute’
- cleanURLRoute: ‘/cleanURL’
+  root: ${BPBRIDGE_IP}
+  getRandomOfferRoute: '/getRandomOffers'
+  shopIDToURLRoute: '/shopIDToUrl'
+  matchAttributeRoute: '/matchAttribute'
+
+urlcleaner:
+  root: '/'
+  cleanURLRoute: '/cleanURL'
