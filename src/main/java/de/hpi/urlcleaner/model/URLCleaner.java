@@ -17,8 +17,8 @@ public class URLCleaner {
 
     private void initializeStrategies() {
         setCleanStrategies(new LinkedList<>());
-        getCleanStrategies().add(new CleanAffiliateMarker());
         getCleanStrategies().add(new CleanRedirect());
+        getCleanStrategies().add(new CleanAffiliateMarker());
     }
 
     public String clean(String rootUrl, String url) {
