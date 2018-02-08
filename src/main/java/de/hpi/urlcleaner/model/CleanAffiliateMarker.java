@@ -9,11 +9,14 @@ public class CleanAffiliateMarker implements CleanStrategy {
 
     public String clean(String rootUrl, String url) {
 
+        // TODO - initialize affiliateSeparator1 and affiliateSeparator2 as a final static fields
         List<String> affiliateSeparator1 = Stream.of("/", "?", "&").collect(Collectors.toList());
         List<String> affiliateSeparator2 = Stream.of("partner=", "utm", "ref=", "clk_rvr_id", "aid=", "apid=", "from=", "spartner=", "rbtc=", "afid=", "affiliateid=", "channable=", "p=psmido", "sid=", "io=", "modsid=", "traffic_source", "smid=", "sclid=", "clk_rvr_id=", "wt_mc=", "tag=", "campaign=", "wmn=", "saleschannelid=", "uympq=", "refid", "cid=", "awc=", "wt.mc_id=", "from=", "partnerid=", "referrerid=", "campaign=", "a_id=", "emsrc=", "pv=", "fee=", "fep=", "store=", "pidOnPds=", "number=", "actionid", "idealo=", "pt=", "kampan=", "m=", "camp=", "sgt=", "source_code", "bp_ua", "adcode", "tp=", "p=", "campid=", "pguid=").collect(Collectors.toList());
 
         try {
             url = java.net.URLDecoder.decode(url, "UTF-8");
+             // TODO handle this exception, return the error to the REST controller, with http 400 and error message
+           
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
