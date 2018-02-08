@@ -11,6 +11,7 @@ public class CleanRedirect implements CleanStrategy {
         try {
             url = java.net.URLDecoder.decode(url, "UTF-8");
         } catch (UnsupportedEncodingException e) {
+            // TODO handle this exception, return the error to the REST controller, with http 400 and error message
             e.printStackTrace();
         }
 
