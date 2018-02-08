@@ -12,6 +12,8 @@ public class URLCleaner {
     private List<CleanStrategy> cleanStrategies;
 
     public URLCleaner() {
+        // TODO - do not needed to initializeStrategies if every implementation of CleanStrategy
+        // will be annotated as @Component
         initializeStrategies();
     }
 
