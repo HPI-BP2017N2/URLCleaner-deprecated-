@@ -8,7 +8,6 @@ import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.io.UnsupportedEncodingException;
 
 @Setter(AccessLevel.PRIVATE)
 @Getter(AccessLevel.PRIVATE)

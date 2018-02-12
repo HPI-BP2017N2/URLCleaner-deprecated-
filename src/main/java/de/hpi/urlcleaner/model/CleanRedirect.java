@@ -1,6 +1,10 @@
 package de.hpi.urlcleaner.model;
 
+import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
+
 import java.io.UnsupportedEncodingException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import static java.lang.Integer.valueOf;
 
@@ -8,10 +12,13 @@ public class CleanRedirect implements CleanStrategy {
 
     public String clean(String rootUrl, String url) {
 
-        try {
-            url = java.net.URLDecoder.decode(url, "UTF-8");
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
+
+        while (url.matches("/%[0-9a-f]{2}/i")) {
+            try {
+                url = java.net.URLDecoder.decode(url, "UTF-8");
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
         }
 
         String virginRootUrl = rootUrl;
