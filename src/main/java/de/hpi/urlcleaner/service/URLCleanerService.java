@@ -22,7 +22,6 @@ public class URLCleanerService {
     public URLCleanerService(BPBridgeClient client) {
         setUrlCleaner(new URLCleaner());
         setClient(client);
-
     }
 
     public String cleanUrl(long shopID, String url) {

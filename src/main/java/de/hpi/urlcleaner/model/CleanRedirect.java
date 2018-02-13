@@ -7,16 +7,6 @@ import static java.lang.Integer.valueOf;
 public class CleanRedirect implements CleanStrategy {
 
     public String clean(String rootUrl, String url) {
-
-
-        while (url.matches("/%[0-9a-f]{2}/i")) {
-            try {
-                url = java.net.URLDecoder.decode(url, "UTF-8");
-            } catch (UnsupportedEncodingException e) {
-                e.printStackTrace();
-            }
-        }
-
         String virginRootUrl = rootUrl;
 
         if (rootUrl.contains("http://")) {rootUrl = rootUrl.substring("http://".length() + 1, rootUrl.length());}
