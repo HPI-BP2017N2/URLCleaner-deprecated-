@@ -1,10 +1,6 @@
 package de.hpi.urlcleaner.model;
 
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
-
 import java.io.UnsupportedEncodingException;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import static java.lang.Integer.valueOf;
 
